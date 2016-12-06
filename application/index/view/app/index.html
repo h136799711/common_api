@@ -1,0 +1,27 @@
+{extend name="template/base" /}
+{block name="title"}应用管理{/block}
+{block name="header"}头部{/block}
+{block name="body"}
+
+<div>
+    <div class="hbd_control_panel">
+
+        <div class="hbd_ctrl_buttons">
+            <a href="{:url('app/add')}">添加</a>
+        </div>
+
+        <div>
+            应用列表
+        </div>
+
+        <div>
+            分页信息
+        </div>
+
+    </div>
+</div>
+
+{/block}
+{block name="footer"}
+
+{/block}

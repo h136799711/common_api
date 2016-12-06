@@ -1,0 +1,81 @@
+{
+  "last_modified":"2016-11-03 17:18",
+  "client_id": "by565fa5076d5ff1",
+  "client_secret": "1d38159563549a77311b715ec5715dd8",
+  "project_name": "经贸四方项目接口测试",
+  "alg":"md5",
+  "url_list":[
+    {"desc":"测试环境地址(中文版)","url":"http://api.java.moodwo.com:8099/jmsfapi/gateway?client_id=by565fa5076d5ff1"}
+  ],
+  "meta_list":[
+    {"title":"单图片查看接口","value":"http://api.java.moodwo.com:8099/jmsfapi/picture?id={图片id}"}
+  ],
+  "api_list": [
+    {
+    "desc": "项目相关接口",
+    "list": [
+      {
+        "desc": "项目查询接口",
+        "type": "By_Project_query",
+        "version": ["100"],
+        "params": [
+          {
+            "key": "keyword",
+            "desc": "关键词[必须]",
+            "value": ""
+          },
+          {
+            "key": "page_num",
+            "desc": "页码[必须]",
+            "value": "1"
+          },
+          {
+            "key": "page_size",
+            "desc": "页数[必须]",
+            "value": "10"
+          }
+        ],
+        "authors": [
+          {
+            "name": "hebidu",
+            "email": "346551990@qq.com"
+          }
+        ]
+      }
+    ]
+  },
+    {
+      "desc": "岗位相关接口",
+      "list": [
+        {
+          "desc": "岗位查询接口",
+          "type": "By_CompanyEmploy_query",
+          "version": ["103"],
+          "params": [
+            {
+              "key": "keywords",
+              "desc": "关键词[必须]",
+              "value": ""
+            },
+            {
+              "key": "page_num",
+              "desc": "页码[必须]",
+              "value": "1"
+            },
+            {
+              "key": "page_size",
+              "desc": "页数[必须]",
+              "value": "10"
+            }
+          ],
+          "authors": [
+            {
+              "name": "hebidu",
+              "email": "346551990@qq.com"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

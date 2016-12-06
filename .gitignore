@@ -1,0 +1,14 @@
+runtime/
+.idea/
+.phpintel/
+*.DS_Store
+*.bak
+**/bak/
+public/upload/
+public/static/cdn/
+public/test/*.html
+public/test/*.php
+sftp-config.json
+
+#only the first time
+application/config

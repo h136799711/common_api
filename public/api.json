@@ -1,0 +1,52 @@
+{
+  "project_name": "接口仓库",
+  "client_id": "",
+  "client_secret": "",
+  "url_list":[
+    {"desc":"何必都的电脑地址()","url":"http://192.168.2.155/github/itboye_common_api/public/index.php/"},
+    {"desc":"正式环境地址(api.guannan.itboye.com)","url":"http://api.guannan.itboye.com/public/index.php/"}
+  ],
+  "meta_list":[
+    {"title":"接口文档地址","value":"https://doc.oschina.net/itboyeapi"},
+    {"title":"测试工具地址","value":"http://api.itboye.com/public/index.html"},
+    {"title":"参与人","value":"张三、李四" }
+  ],
+  "api_list": [
+    {
+      "desc": "用户登录服务接口",
+      "type": "By_User_login",
+      "version": "102",
+      "params": [
+        {"key":"username","desc":"登录用户名（限手机号）", "value":""},
+        {"key":"password","desc":"登录密码（6-64位）" , "value":""}
+      ],
+      "authors": [
+        {
+          "name": "hebidu", "email": "hebiduhebi@126.com"
+        },
+        {
+          "name": "hebidu", "email": "hebiduhebi@126.com"
+        }
+      ]
+    },
+    {
+      "desc": "用户注册服务接口",
+      "type": "By_User_register",
+      "params": [
+        {"key":"username","desc":"注册用户名（限手机号）"},
+        {"key":"password","desc":"注册密码（限手机号）"}
+      ],
+      "version": "101",
+      "authors": [
+        {
+          "name": "hebidu", "email": "hebiduhebi@126.com"
+        },
+        {
+          "name": "hebidu", "email": "hebiduhebi@126.com"
+        }
+      ]
+    }
+
+
+  ]
+}

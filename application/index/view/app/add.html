@@ -1,0 +1,32 @@
+{extend name="template/base" /}
+{block name="title"}
+应用添加
+{/block}
+{block name="header"}
+{/block}
+{block name="body"}
+
+<div>
+    <div class="hbd_control_panel">
+
+        <div class="hbd_ctrl_buttons">
+            <a href="{:url('app/add')}" target-form="ajaxForm" class="ajax-post">保存</a>
+        </div>
+
+        <div>
+            <form class="ajaxForm">
+
+            </form>
+        </div>
+
+        <div>
+            分页信息
+        </div>
+
+    </div>
+</div>
+
+{/block}
+{block name="footer"}
+
+{/block}

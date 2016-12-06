@@ -1,0 +1,9 @@
+<?php
+
+    $data = [
+        'type'=>'E',
+        'code'=>$code,
+        'data'=>htmlentities($message)
+    ];
+
+    echo json_encode($data);

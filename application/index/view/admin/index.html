@@ -1,0 +1,125 @@
+{extend name="template/base" /}
+{block name="title"}
+API接口后台管理
+{/block}
+{block name="header"}
+<link type="text/css" rel="stylesheet" href="__CDN__/bootstrap/3.3.0/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="__CDN__/fontawesome/4.3.0/css/font-awesome.min.css?V=4.3.0" />
+
+<script type="text/javascript" src="__CDN__/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="__CDN__/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="__THEME__/css/font-awesome.min.css">
+<link rel="stylesheet" href="__THEME__/css/index.css">
+<link rel="stylesheet" href="__THEME__/css/skins/_all-skins.css">
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="__CDN__/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+{/block}
+{block name="body"}
+<div id="ajax-loader" style="cursor: progress; position: fixed; top: -50%; left: -50%; width: 200%; height: 200%; background: #fff; z-index: 10000; overflow: hidden;">
+    <img src="__THEME__/img/ajax-loader.gif" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto;" />
+</div>
+<div class="wrapper">
+    <!--头部信息-->
+    <header class="main-header">
+        <a href="{:url('index/index/index')}" target="_self" class="logo">
+            <span class="logo-mini">BY data</span>
+            <span class="logo-lg"><strong>博也数据</strong></span>
+        </a>
+        <nav class="navbar navbar-static-top">
+            <a class="sidebar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+
+
+
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="__THEME__/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                            <span class="hidden-xs">{$user['username'] }</span>
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a class="menuItem" data-id="clearCache" href="{:url('index/account/updatepassword')}"><i class="fa fa-cogs"></i>修改密码</a></li>
+                            <li><a class="menuItem" data-id="clearCache" href="{:url('index/cache/clearAll')}"><i class="fa fa-trash-o"></i>清空缓存</a></li>
+                            <li><a class="menuItem" data-id="skinSet" href="{:url('index/config/set')}"><i class="fa fa-paint-brush"></i>皮肤设置</a></li>
+                            <li class="divider"></li>
+                            <li><a href="{:url('index/index/logout')}"><i class="ace-icon fa fa-power-off"></i>安全退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--左边导航-->
+    <div class="main-sidebar">
+        <div class="sidebar">
+
+            <ul class="sidebar-menu" id="sidebar-menu">
+
+                <li class="treeview active">
+                    <a href="javascript:void(0);">
+                        <i class="fa fa-desktop"></i>
+                        <span>应用管理</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu menu-open" style="display: block;">
+                        <li>
+                            <a class="menuItem" href="{:url('index/app/index')}">
+                                <i class="fa fa-leaf"></i>
+                                应用列表
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--中间内容-->
+    <div id="content-wrapper" class="content-wrapper">
+        <div class="content-tabs">
+            <button class="roll-nav roll-left tabLeft">
+                <i class="fa fa-backward"></i>
+            </button>
+            <nav class="page-tabs menuTabs">
+                <div class="page-tabs-content" style="margin-left: 0;">
+                    <a href="javascript:;" class="menuTab active" data-id="/Default">首页</a>
+                </div>
+            </nav>
+            <button class="roll-nav roll-right tabRight">
+                <i class="fa fa-forward" style="margin-left: 3px;"></i>
+            </button>
+            <div class="btn-group roll-nav roll-right">
+                <button class="dropdown tabClose" data-toggle="dropdown">
+                    页签操作<i class="fa fa-caret-down" style="padding-left: 3px;"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a class="tabReload" href="javascript:void(0);">刷新当前</a></li>
+                    <li><a class="tabCloseCurrent" href="javascript:void(0);">关闭当前</a></li>
+                    <li><a class="tabCloseAll" href="javascript:void(0);">全部关闭</a></li>
+                    <li><a class="tabCloseOther" href="javascript:void(0);">除此之外全部关闭</a></li>
+                </ul>
+            </div>
+            <button class="roll-nav roll-right fullscreen"><i class="fa fa-arrows-alt"></i></button>
+        </div>
+
+        <div class="content-iframe" style="overflow: hidden;">
+            <div class="mainContent" id="content-main" style="margin: 10px; margin-bottom: 0; padding: 0;">
+                <iframe class="LRADMS_iframe" width="100%" height="100%"
+                        src="{:url('index/index/wel')}"
+                        frameborder="0" data-id="/Default"></iframe>
+                <iframe class="LRADMS_iframe" width="100%" height="100%"
+                        src="{:url('index/Index/about')}"
+                        frameborder="0" data-id="/About"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+
+{block name="footer"}
+<script type="text/javascript" src="__THEME__/js/index.js"></script>
+{/block}

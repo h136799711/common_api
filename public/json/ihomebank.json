@@ -1,0 +1,43 @@
+{
+  "last_modified":"2016-11-03 17:18",
+  "client_id": "by580d6fd2da37e1",
+  "client_secret": "4256e5b38f10b5794e099c23321cd24f",
+  "alg":"md5",
+  "project_name": "住家项目接口测试",
+  "url_list":[
+    {"desc":"测试环境地址","url":"http://api.ihomebank.com/public/index.php"}
+  ],
+  "meta_list":[
+    {"title":"单图片查看接口","value":"http://api.java.moodwo.com:8099/jmsfapi/picture?id={图片id}"}
+  ],
+  "api_list": [
+    {
+      "desc": "用户相关接口",
+      "list": [
+        {
+          "desc": "用户登录接口",
+          "type": "BY_User_login",
+          "version": ["100"],
+          "params": [
+            {
+              "key": "username",
+              "desc": "关键词[必须]",
+              "value": "13484379290"
+            },
+            {
+              "key": "password",
+              "desc": "密码[必须]",
+              "value": "123456"
+            }
+          ],
+          "authors": [
+            {
+              "name": "",
+              "email": "@qq.com"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

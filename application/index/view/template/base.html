@@ -1,0 +1,28 @@
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{block name="title"}标题{/block}</title>
+    {block name="header"}头部{/block}
+
+    <link type="text/css" rel="stylesheet" href="__CDN__/fontawesome/4.3.0/css/font-awesome.min.css?V=4.3.0" />
+    <!-- 脚本 -->
+    <script type="text/javascript" src="__CDN__/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="__CDN__/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <!-- nprogress plugin -->
+    <link rel="stylesheet" type="text/css" href="__CDN__/nprogress/nprogress.css" />
+    <script type="text/javascript" src="__CDN__/nprogress/nprogress.js"></script>
+    <!-- scojs plugin -->
+    <link rel="stylesheet" type="text/css" href="__CDN__/sco1.0.2-8/css/scojs.css" />
+    <script type="text/javascript" src="__CDN__/sco1.0.2-8/js/sco.all.js"></script>
+    <!-- 自定义模块通用样式 -->
+    <link rel="stylesheet" type="text/css" href="__CSS__/common.css?v=__APP_VERSION__" />
+    <script type="text/javascript" src="__JS__/common.js?v=__APP_VERSION__"></script>
+    <script type="text/javascript" src="{:url('Js/itboye')}?v=__APP_VERSION__"></script>
+
+</head>
+<body class="hold-transition skin-purple sidebar-mini">
+{block name="body"}主内容{/block}
+{block name="footer"}{/block}
+</body>
+</html>
