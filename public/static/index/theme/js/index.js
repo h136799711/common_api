@@ -147,6 +147,9 @@
                 });
                 $('.menuTabs .page-tabs-content').append(str);
                 $.learuntab.scrollToTab($('.menuTab.active'));
+            }else{
+                $iframe = $('.mainContent iframe:visible');
+                $iframe.attr("src",$iframe.attr("src"));
             }
             return false;
         },
