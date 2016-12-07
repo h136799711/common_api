@@ -49,4 +49,18 @@ class SessionHelper
         return session(SessionKeys::USER);
     }
 
+    /**
+     * 获取用户id
+     */
+    public static function getUserId(){
+
+        $user = self::getUserInfo();
+
+        if(is_array($user) && isset($user['id'])){
+            return $user['id'];
+        }
+
+        return -1;
+    }
+
 }

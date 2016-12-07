@@ -8,13 +8,19 @@
 
 namespace app\src\apicenter\action;
 
+use app\src\apicenter\logic\AppLogic;
 use app\src\apicenter\model\App;
 use app\src\base\action\BaseAction;
 
+/**
+ * Class AppAddAction
+ * 应用添加操作
+ * @author hebidu <email:346551990@qq.com>
+ * @package app\src\apicenter\action
+ */
 class AppAddAction extends BaseAction
 {
     public function add(App $app){
-        //TODO: 创建应用
-        return $this->result(['status'=>false,'info'=>'fail']);
+        return (new AppLogic())->add($app);
     }
 }

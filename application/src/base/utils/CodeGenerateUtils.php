@@ -49,7 +49,8 @@ class CodeGenerateUtils
     /**
      * 获取app secret
      * @author hebidu <email:346551990@qq.com>
-     * 
+     * @param $uid
+     * @return string
      */
     public function getAppSecret($uid){
         return md5(uniqid().$uid);

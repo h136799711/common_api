@@ -8,6 +8,7 @@
 
 namespace app\src\base\logic;
 
+use app\src\apicenter\model\BaseModel;
 use app\src\base\helper\ExceptionHelper;
 use think\Db;
 use think\exception\DbException;
@@ -334,6 +335,11 @@ abstract class BaseLogic {
     public function add($entity,$pk='id') {
 
         try{
+
+            if($entity instanceof BaseModel && method_exists($entity,"toPoArray")){
+                $entity = $entity->toPoArray();
+            }
+
             $this -> model -> data($entity) ->isUpdate(false) -> save();
 
             $result = $this->getInsertId($pk);

@@ -40,9 +40,9 @@ class  LoggedIn extends Controller
         $this->assign("user",SessionHelper::getUserInfo());
     }
 
-    protected function returnResult($result){
+    protected function returnResult($result,$msg){
         if($result['status']){
-            $this->success($result['info']);
+            $this->success($msg,null,$result['info']);
         }else{
             $this->error($result['info']);
         }

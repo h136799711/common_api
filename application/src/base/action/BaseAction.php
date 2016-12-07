@@ -9,6 +9,7 @@
 namespace app\src\base\action;
 
 
+use app\src\apicenter\exception\ActionException;
 use app\src\base\exception\BusinessException;
 use app\src\base\helper\ExceptionHelper;
 use think\Exception;
@@ -29,7 +30,7 @@ class BaseAction
     
     protected function error($data){
 
-        if($data instanceof  BusinessException){
+        if($data instanceof  ActionException){
             $data = "BY_".$data->getMessage();
         }
         elseif($data instanceof  Exception){
