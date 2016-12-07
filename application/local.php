@@ -9,7 +9,7 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-define("ITBOYE_CDN","http://api.cdn.itboye.com");
+define("ITBOYE_CDN","http://apidev.cdn.itboye.com");
 
 return [
     // +----------------------------------------------------------------------
